@@ -21,7 +21,7 @@ public class CRUD_Gestion_Etudiants {
     }
 
     // Méthode main
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Connection con = Connect(); // se connecter à MySQL
 
         if (con != null) {
@@ -30,5 +30,7 @@ public class CRUD_Gestion_Etudiants {
         } else {
             System.out.println("❌ Connexion échouée !");
         }
+        afficherListEtudiant aff=new afficherListEtudiant();
+        aff.afficherListEtudiant(con);
     }
 }

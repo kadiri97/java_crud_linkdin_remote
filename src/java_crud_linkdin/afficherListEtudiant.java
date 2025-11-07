@@ -19,7 +19,7 @@ public class afficherListEtudiant {
 				String nom = rs.getString("nom");
 				String prenom = rs.getString("prenom");
 				int age = rs.getInt("id");
-				java.sql.Date dateInscription = rs.getDate("date_insription");
+				java.sql.Date dateInscription = rs.getDate("date_inscription");
 				System.out.printf("%d | %s | %s | %d | %s%n", id, nom, prenom, age, dateInscription);
 			}
 		} catch (SQLException e) {

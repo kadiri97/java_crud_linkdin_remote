@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ajouterEtudiant {
 
-	 public void ajouterEtudiant(Connection con) {
+	 public void ajouterEtudiant(Connection con, Scanner sc2) {
 	        try (Scanner sc = new Scanner(System.in)) {
 	            System.out.print("Nom : ");
 	            String nom = sc.nextLine();

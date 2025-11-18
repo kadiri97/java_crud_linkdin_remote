@@ -32,8 +32,10 @@ public class CRUD_Gestion_Etudiants {
             do {
                 System.out.println("\n******** MENU GESTION ETUDIANTS ********");
                 System.out.println("1️ => Ajouter un étudiant");
-                System.out.println("2️ => Afficher les étudiants");
-                System.out.println("3️ => Supprimer un étudiant");
+                System.out.println("2️ => Find student by ID");
+                System.out.println("3 => Afficher les étudiants");
+                System.out.println("4 => Supprimer un étudiant");
+                System.out.println("5 => MODIFIER UN ETUDIANT");
                 System.out.println("0️ => Quitter");
                 System.out.print("👉 Votre choix : ");
                 choix = sc.nextInt();
@@ -46,17 +48,21 @@ public class CRUD_Gestion_Etudiants {
                         break;
 
                     case 2:
+                        System.out.println("******** Find student by ID ********");
+                        afficherIdEtudiant by_Id=new afficherIdEtudiant();
+                        by_Id.afficherIdEtudiant(con, sc);
+                        break;
+                    case 3:
                         System.out.println("******** AFFICHER LES ETUDIANTS ********");
                         afficherListEtudiant aff = new afficherListEtudiant();
                         aff.afficherListEtudiant(con);
                         break;
-
-                    case 3:
+                    case 4:
                         System.out.println("******** SUPPRIMER UN ETUDIANT ********");
                         deleteEtudiantById del = new deleteEtudiantById();
                         del.deleteEtudiantById(con, sc);
                         break;
-                    case 4:
+                    case 5:
                         System.out.println("******** MODIFIER UN ETUDIANT ********");
                         updateEtudiant up = new updateEtudiant();
                         up.updateEtudiant(con, sc);
